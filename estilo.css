@@ -1,0 +1,88 @@
+/*importamos la fuente de Google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* borro los margenes por defecto*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+}
+/*posición del menú*/
+#header {
+  margin: 0px;
+  width: 500px;
+  position: fixed;
+  z-index: 2;
+  text-align: left;
+}
+
+/*eliminamos las viñetas*/
+ul,
+ol {
+  list-style-type: none;
+}
+/*estilo del menú*/
+.nav li a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+/*cambia el fondo cuando pasa el mouse*/
+.nav li a:hover {
+  background-color: grey;
+}
+
+/*no se muestra el submenú */
+.nav li > ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+/*cunado paso el mouse en el padre del menú muestra el submenú en bloque*/
+.nav li:hover > ul {
+  display: block;
+}
+
+/* los hijos de nav se ubican abajo a la izquierda (los submenús) */
+.nav > li {
+  float: left;
+}
+
+/*para que el submenú de Pedidos se vea a la derecha*/
+.nav li ul li ul {
+  right: -140px;
+  top: 0px;
+}
+.nav li ul li {
+  position: relative;
+}
+
+/*posición imagen*/
+img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  position: relative;
+}
+/* estilo de hr*/
+hr {
+  background-color: rgb(6, 129, 211);
+  height: 10px;
+  margin-top: -4px;
+  margin-bottom: -1px;
+}
+/*posicón texto*/
+.texto {
+  z-index: 1;
+  position: relative;
+  margin: 40px 20px;
+  text-align: justify;
+}
